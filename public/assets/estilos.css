@@ -4,14 +4,46 @@ body {
     background-size: cover;
     margin: 0;
     padding: 0;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 100px;
+}
+
+.fixed-header > h1 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.fixed-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #141e28;
+    color: #fff; 
+    text-align: center;
+    padding: 10px 0 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#link {
+    position: absolute; /* Posición absoluta en relación al encabezado */
+    top: -10%; /* Ajusta según tus necesidades */
+    right: 1%; /* Ajusta según tus necesidades */ /* Cambia el ancho a auto para que se ajuste al contenido */
+    max-width: 100px;
+    max-height: 50px;
+    font-size: small;
+}
+
+
+#link:hover {
+    background-color: #fff; 
+    color: #333; 
 }
 
 .container {
-    margin-top: auto;
+    margin-top: 10%;
     width: 100%;
     max-width: 800px;
 }

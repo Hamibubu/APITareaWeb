@@ -16,6 +16,9 @@ $(document).ready(function() {
     }
 
     if($("form").length){
+        $('#link').on('click', function() {
+            window.location.href = "./../views/index.html";
+        });
         $("form").on('submit', function(event) {
             event.preventDefault();
 
@@ -49,6 +52,9 @@ $(document).ready(function() {
             $(this).addClass('was-validated');
         });
     } else {
+        $('#link').on('click', function() {
+            window.location.href = "./../views/postmovies.html";
+        });
         $.ajax({
             url: 'http://localhost:3000/movies', // Asegúrate de que esta sea la URL correcta para obtener los datos
             method: 'GET',
