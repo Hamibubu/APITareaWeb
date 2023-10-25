@@ -1,0 +1,46 @@
+.btn-danger {
+    background-color: #e74c3c;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.table-responsive {
+    border-radius: 15px;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+h4 {
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+.table-dark tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+thead {
+    position: sticky;
+}
+
+table {
+    border-radius: 15px;
+}
+
+.table-dark tbody tr td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary {
+    background-color: #f79336;
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    height: 100%;
+}
