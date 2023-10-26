@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    function eliminar(id) {
+    function eliminar(id, row) {
         $.ajax({
             url: 'http://localhost:3000/movies',
             method: 'DELETE',
@@ -7,6 +7,7 @@ $(document).ready(function() {
             contentType: 'application/json',
             success: function(response) {
                 alert('Película eliminada con éxito');
+                row.remove();
             },
             error: function(error) {
                 console.error('Error:', error);
@@ -41,6 +42,7 @@ $(document).ready(function() {
                     contentType: 'application/json',
                     success: function(response) {
                         alert('Película registrada con éxito!');
+                        window.location.href = "./../views/index.html";
                         $("form")[0].reset();
                     },
                     error: function(error) {
@@ -59,6 +61,9 @@ $(document).ready(function() {
             url: 'http://localhost:3000/movies', // Asegúrate de que esta sea la URL correcta para obtener los datos
             method: 'GET',
             success: function(response) {
+                if(!response.length){
+                    alert('Aún no has agregado películas');
+                };
                 let cont = 0;
                 response.forEach(function(movie) {
                     cont++;
@@ -79,7 +84,8 @@ $(document).ready(function() {
                 $('.eliminar-pelicula').on('click', function() {
                     const button = $(this);
                     const id = button.data('id');
-                    eliminar(id);
+                    const row = button.closest('tr');
+                    eliminar(id,row);
                 });
             },
             error: function(error) {
